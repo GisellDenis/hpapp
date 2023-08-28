@@ -8,6 +8,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+
         }
       },
       "root": "",
@@ -30,9 +31,17 @@
               "src/assets"
             ],
             "styles": [
+
+              "C:/Users/sunmo/OneDrive/Desktop/EPICODE/app/hpapp/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "C:/Users/sunmo/OneDrive/Desktop/EPICODE/app/hpapp/node_modules/jquery/dist/jquery.min.js",
+              "C:/Users/sunmo/OneDrive/Desktop/EPICODE/app/hpapp/node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "C:/Users/sunmo/OneDrive/Desktop/EPICODE/app/hpapp/node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
+
           },
           "configurations": {
             "production": {
@@ -56,7 +65,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
